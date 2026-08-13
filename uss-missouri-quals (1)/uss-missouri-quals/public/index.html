@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>USS Missouri SSN-780 | Qualification Application</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <h1>USS MISSOURI SSN-780</h1>
+  <p>Qualification System — Submit an Application</p>
+</header>
+
+<main>
+  <nav class="tabs">
+    <a href="index.html" class="active">Apply</a>
+    <a href="admin.html">Review Queue (Chiefs/Officers)</a>
+  </nav>
+
+  <div class="card">
+    <form id="qualForm">
+      <label for="discord_name">Discord Name / Callsign</label>
+      <input id="discord_name" name="discord_name" required placeholder="e.g. Saner" />
+
+      <label for="discord_id">Discord ID (optional, helps avoid mix-ups)</label>
+      <input id="discord_id" name="discord_id" placeholder="e.g. 123456789012345678" />
+
+      <label for="rank">Rank</label>
+      <input id="rank" name="rank" required placeholder="e.g. PO2" />
+
+      <label for="rating">Rating (leave blank for shipwide qualifications)</label>
+      <select id="rating" name="rating">
+        <option value="">— Shipwide / Other Watch —</option>
+      </select>
+
+      <label for="qualification">Qualification</label>
+      <select id="qualification" name="qualification" required>
+        <option value="">Select a rating first (or leave rating blank)</option>
+      </select>
+      <div class="qual-desc" id="qualDesc"></div>
+
+      <label for="recommended_by">Recommending Chief/Officer (if you have one)</label>
+      <input id="recommended_by" name="recommended_by" placeholder="e.g. LCDR S. Murphy" />
+
+      <label for="justification">Why do you believe you've earned this qualification?</label>
+      <textarea id="justification" name="justification" required
+        placeholder="Activity, event participation, knowledge of the system/rating, etc."></textarea>
+
+      <button type="submit">Submit Application</button>
+      <div id="formMsg"></div>
+    </form>
+  </div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

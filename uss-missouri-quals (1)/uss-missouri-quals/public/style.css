@@ -1,0 +1,156 @@
+:root {
+  --navy: #0a1f33;
+  --navy-light: #14304f;
+  --gold: #c8a951;
+  --steel: #8a97a3;
+  --bg: #0d1b2a;
+  --card: #132c44;
+  --text: #e8edf2;
+  --muted: #9fb0c0;
+  --good: #3fa96a;
+  --bad: #c0503f;
+  --pending: #c8a951;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: linear-gradient(180deg, var(--bg), #08131f 60%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+header {
+  background: var(--navy);
+  border-bottom: 3px solid var(--gold);
+  padding: 20px 24px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+}
+
+header p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 28px 20px 60px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--navy-light);
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 16px 0 6px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--navy-light);
+  background: #0b1d30;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+textarea { resize: vertical; min-height: 90px; }
+
+button {
+  margin-top: 20px;
+  background: var(--gold);
+  color: #16202b;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+button:hover { filter: brightness(1.08); }
+button.secondary {
+  background: transparent;
+  border: 1px solid var(--steel);
+  color: var(--text);
+  padding: 6px 12px;
+  margin: 0 0 0 8px;
+  font-size: 0.8rem;
+}
+button.deny { border-color: var(--bad); }
+button.approve { border-color: var(--good); }
+
+.qual-desc {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+#formMsg { margin-top: 14px; font-size: 0.9rem; }
+#formMsg.ok { color: var(--good); }
+#formMsg.err { color: var(--bad); }
+
+.app-row {
+  border-bottom: 1px solid var(--navy-light);
+  padding: 14px 0;
+}
+.app-row:last-child { border-bottom: none; }
+
+.app-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.app-name { font-weight: 600; }
+.app-qual { color: var(--gold); }
+
+.status-badge {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+  border-radius: 10px;
+}
+.status-pending { background: rgba(200,169,81,0.15); color: var(--pending); }
+.status-approved { background: rgba(63,169,106,0.15); color: var(--good); }
+.status-denied { background: rgba(192,80,63,0.15); color: var(--bad); }
+
+.app-meta { font-size: 0.82rem; color: var(--muted); margin-top: 4px; }
+.app-just { margin-top: 8px; font-size: 0.9rem; }
+.app-actions { margin-top: 10px; }
+
+nav.tabs {
+  text-align: center;
+  margin-bottom: 20px;
+}
+nav.tabs a {
+  color: var(--muted);
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 0.85rem;
+}
+nav.tabs a.active { color: var(--gold); font-weight: 600; }
+
+.empty { color: var(--muted); text-align: center; padding: 30px 0; }

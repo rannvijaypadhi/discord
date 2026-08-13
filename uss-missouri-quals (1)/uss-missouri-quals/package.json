@@ -1,0 +1,13 @@
+{
+  "name": "uss-missouri-qual-system",
+  "version": "1.0.0",
+  "description": "Qualification application system for the USS Missouri SSN-780 RP server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "better-sqlite3": "^11.3.0"
+  }
+}
